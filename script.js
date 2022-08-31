@@ -59,7 +59,7 @@ function setPose(index) {
 		sprites.push(new Image());
 		sprites[i].crossOrigin = "anonymous"; // Avoids security errors
 		sprites[i].addEventListener("load", imageLoaded);
-		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/multitroid" + suitNames[suitIndex] + "/" + poseNames[poseIndex] + "/" + i.toString() + ".png";
+		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/" + suitNames[suitIndex] + "/" + poseNames[poseIndex] + "/" + i.toString() + ".png";
 	}
 }
 
@@ -213,7 +213,8 @@ const helpText = [ // Text for #helpText
 	"...Or use the \"Up\", \"Down\", \"Home\", and \"End\" keys.",
 	"Click on the suit to quickly target a specific color.",
 	"After designing a palette, click \"Export Palette\".",
-	"Place image in: Profiles/.../mods/ palettes/suits",
+	"Open palette in image editor of your choice.",
+	"Paste palette strip over your color of choice.",
 	"Enjoy your custom suit colors!<br>",
 ];
 let helpIndex; // Current index of helpText
@@ -267,27 +268,19 @@ suitCanvas.addEventListener("click", function(evt) {
 
 // Change to previous suit on click
 document.getElementById("prevSuitButton").addEventListener("click", function() {
-	if (confirm("Change suit?\nWarning: This will clear your current palette.")) {
+	if (confirm("Change suit type?\nWarning: This will clear your current palette.")) {
 		setSuit((suitIndex + suitNames.length - 1) % suitNames.length);
 	}
 });
 
 // Change to next suit on click
 document.getElementById("nextSuitButton").addEventListener("click", function() {
-	if (confirm("Change suit?\nWarning: This will clear your current palette.")) {
+	if (confirm("Change suit type?\nWarning: This will clear your current palette.")) {
 		setSuit((suitIndex + 1) % suitNames.length);
 	}
 });
 
-// Change to previous pose on click
-document.getElementById("prevPoseButton").addEventListener("click", function() {
-	setPose((poseIndex + poseNames.length - 1) % poseNames.length);
-});
 
-// Change to next pose on click
-document.getElementById("nextPoseButton").addEventListener("click", function() {
-	setPose((poseIndex + 1) % poseNames.length);
-});
 
 
 /*
