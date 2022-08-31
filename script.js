@@ -5,8 +5,8 @@
 	suitCanvas Setup
 */
 
-const suitNames = ["power", "varia", "gravity", "fusion_power", "fusion_varia", "fusion_gravity"];
-const poseNames = ["front", "side", "walk", "run", "morph_ball"];
+const suitNames = ["multitroid", "multitroid_fusion"];
+const poseNames = ["power_suit", "varia_suit", "gravity_suit", "omega_suit"];
 const poseImageCount = [4, 4, 10, 10, 8]; // Helps determine how many images there are to load
 const poseOffsets = [0, 45, 55, 65, 81]; // Helps vertically center the suit on suitCanvas
 
@@ -38,17 +38,17 @@ setAnimationSpeed(1);
 // Changes the current suit. This function is called at the beginning of the program
 function setSuit(index) {
 	suitIndex = index;
-	document.getElementById("suitText").innerHTML = suitNames[suitIndex].toUpperCase().replace("_", " ") + " SUIT";
+	document.getElementById("suitText").innerHTML = suitNames[suitIndex].toUpperCase().replace("_", " ");
 	setPose(0);
 	
 	// When this image loads, the palette is initialized via paletteImg's EventListener function
-	paletteImg.src = "https://electrixcodes.github.io/AM2RSuitEditor/assets/palettes/" + suitNames[suitIndex] + ".png";
+	paletteImg.src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/palettes/" + suitNames[suitIndex] + ".png";
 }
 
 // Changes the current pose, loading the necessary images to do so
 function setPose(index) {
 	poseIndex = index;
-	document.getElementById("poseText").innerHTML = poseNames[poseIndex].toUpperCase().replace("_", " ") + " VIEW";
+	document.getElementById("poseText").innerHTML = poseNames[poseIndex].toUpperCase().replace("_", " ");
 	
 	unloadedImageCount = poseImageCount[poseIndex];
 	
@@ -59,7 +59,7 @@ function setPose(index) {
 		sprites.push(new Image());
 		sprites[i].crossOrigin = "anonymous"; // Avoids security errors
 		sprites[i].addEventListener("load", imageLoaded);
-		sprites[i].src = "https://electrixcodes.github.io/AM2RSuitEditor/assets/sprites/" + suitNames[suitIndex] + "/" + poseNames[poseIndex] + "/" + i.toString() + ".png";
+		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/multitroid" + suitNames[suitIndex] + "/" + poseNames[poseIndex] + "/" + i.toString() + ".png";
 	}
 }
 
