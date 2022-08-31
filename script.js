@@ -59,7 +59,7 @@ function setPose(index) {
 		sprites.push(new Image());
 		sprites[i].crossOrigin = "anonymous"; // Avoids security errors
 		sprites[i].addEventListener("load", imageLoaded);
-		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/" + suitNames[suitIndex] + "/power_suit/" + i.toString() + ".png";
+		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/" + suitNames[suitIndex] + "/" + i.toString() + ".png";
 	}
 }
 
