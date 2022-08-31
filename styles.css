@@ -1,0 +1,192 @@
+/* styles.css
+   Handles the CSS for this project. */
+
+body {
+	background-color: rgb(0, 0, 64); /* #400000 */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@font-face {
+	font-family: Acknowledge;
+	src: url("assets/acknowtt.ttf");
+}
+
+p, button {
+	margin: 0px;
+	border-radius: 15px;
+	background-color: rgb(128, 0, 255); /* #FF0000 */
+	padding: 4px;
+	font-family: Acknowledge;
+	font-size: 22pt;
+	text-align: center;
+	line-height: 20px;
+	user-select: none; /* prevents text from being selected */
+}
+
+#box {
+	width: 650px;
+	height: 650px;
+	padding: 10px;
+	display: flex; /* organize #leftPanel, #palette, and #rightPanel */
+	background-color: rgb(0, 0, 64); /* #800000 or rgb(128,0,0) */
+}
+
+
+/*
+	Class Styles
+*/
+
+.clickable {
+	border-style: none;
+	cursor: pointer;
+}
+
+.clickable:hover {
+	background-color: rgb(0, 128, 256) !important; /* might be able to remove this */
+}
+
+.variableChanger {
+	align-self: stretch;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.variableChanger p {
+	flex-grow: 1;
+	margin: 0px;
+	line-height: 20px;
+}
+
+.variableChanger button {
+	margin: 0px 4px;
+	height: 28px;
+	padding: 8px;
+	line-height: 0px;
+	margin-bottom: 0px !important; /* might be able to remove this */
+}
+
+
+/*
+	Left Panel Styles
+*/
+
+#leftPanel {
+	flex: 0 0 50%;
+	box-sizing: border-box; /* prevents padding from expanding the div */
+	background-color: rgb(32, 0, 64); /* #C00000 */
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#heading {
+	padding: 8px !important;
+	font-size: 26pt !important;
+}
+
+#canvas {
+	cursor: crosshair;
+	margin-bottom: 20px;
+}
+
+
+/*
+	Palette Styles
+*/
+
+#palette {
+	flex: 0 0 35px;
+	cursor: crosshair;
+}
+
+
+/*
+	Right Panel Styles
+*/
+
+#rightPanel {
+	flex: 1 1 50%;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#rightPanel hr {
+	margin: 15px 0px;
+	color: rgb(0, 128, 0);
+}
+
+#helpText {
+	height: 88px;
+	margin: 0px 0px 4px 0px;
+	text-align: left;
+}
+
+#helpDiv {
+	align-self: flex-end;
+}
+
+#targetDiv { /* maybe change to #rightPanel div? */
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	background-color: rgb(32, 0, 64); /* #FF0000 */
+	border-radius: 15px;
+}
+
+#targetColorSpan { /* displays the target color */
+	background-color: black;
+	border: solid 2px white;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
+}
+
+#targetColorText {
+	margin: 0px 0px 0px 4px;
+	text-align: left;
+}
+
+#replaceDiv { /* maybe change to #rightPanel div? */
+	margin-bottom: 15px;
+	background-color: rgb(255, 0, 255); /* #FF0000 */
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+}
+
+#replaceColorSpan { /* displays the target color */
+	background-color: black;
+	border: solid 2px white;
+	width: 50px;
+	height: 50px;
+}
+
+#replaceColorText {
+	margin: 0px 0px 0px 4px;
+	background-color: transparent;
+	text-align: left;
+}
+
+#rightPanel > button {
+	margin-bottom: 15px;
+}
+
+#creditText {
+	margin: 0px;
+	align-self: center;
+	background-color: rgb(0, 0, 64); /* #FF0000 */
+	padding: 6px;
+	font-size: 20pt;
+	line-height: 16px;
+}
+
+#colorPicker {
+	display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AM2R Suit Editor</title>
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="script.js" defer></script>
+	</head>
+	
+	<body>
+		<div id="box">
+			<div id="leftPanel">
+				<p id="heading">AM2R Suit Editor</p>
+				<canvas id="canvas" width="270px" height="450px"></canvas>
+				<div class="variableChanger">
+					<button id="prevSuitButton" class="clickable"><</button>
+					<p id="suitText">Power Suit</p>
+					<button id="nextSuitButton" class="clickable">></button>
+				</div>
+				<div class="variableChanger">
+					<button id="prevPoseButton" class="clickable"><</button>
+					<p id="poseText">Front View</p>
+					<button id="nextPoseButton" class="clickable">></button>
+				</div>
+			</div>
+			<canvas id="palette" width="35px" height="650px"></canvas>
+			<div id="rightPanel">
+				<p id="helpText"></p>
+				<div id="helpDiv" class="variableChanger">
+					<button id="prevHelpTextButton" class="clickable"><</button>
+					<button id="nextHelpTextButton" class="clickable">></button>
+				</div>
+				<hr>
+				<div id="targetDiv">
+					<span id="targetColorSpan"></span>
+					<p id="targetColorText"></p>
+				</div>
+				<div id="replaceDiv" class="clickable">
+					<span id="replaceColorSpan"></span>
+					<p id="replaceColorText"></p>
+				</div>
+				<button id="resetColorButton" class="clickable">Reset Color</button>
+				<div class="variableChanger">
+					<button id="decreaseSpeedButton" class="clickable"><</button>
+					<p id="animationSpeedText">Speed: 1.0x</p>
+					<button id="increaseSpeedButton" class="clickable">></button>
+				</div>
+				<hr>
+				<button id="resetAllColorsButton" class="clickable">Reset All Colors</button>
+				<button id="importPaletteButton" class="clickable">Import Palette</button>
+				<button id="exportPaletteButton" class="clickable">Export Palette</button>
+				<p id="creditText">version 1.0<br>by Electrix</p>
+			</div>
+		</div>
+		<input type="color" id="colorPicker">
+	</body>
+</html>
