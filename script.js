@@ -33,7 +33,7 @@ function setAnimationSpeed(x) {
 	document.getElementById("animationSpeedText").innerHTML = "Speed: " + animationSpeed.toString().padEnd(2, ".").padEnd(4, "0") + "x";
 }
 
-setAnimationSpeed(1);
+setAnimationSpeed(.25);
 
 // Changes the current suit. This function is called at the beginning of the program
 function setSuit(index) {
@@ -59,7 +59,7 @@ function setPose(index) {
 		sprites.push(new Image());
 		sprites[i].crossOrigin = "anonymous"; // Avoids security errors
 		sprites[i].addEventListener("load", imageLoaded);
-		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/" + suitNames[suitIndex] + "/" + poseNames[poseIndex] + "/" + i.toString() + ".png";
+		sprites[i].src = "https://vanessamae1087.github.io/Multitroid-Suit-Editor/assets/sprites/" + suitNames[suitIndex] + "/power_suit/" + i.toString() + ".png";
 	}
 }
 
